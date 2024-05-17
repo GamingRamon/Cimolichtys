@@ -1,6 +1,7 @@
 package net.Ramon.cimolichthys;
 
 import com.mojang.logging.LogUtils;
+import net.Ramon.cimolichthys.item.ModCreativeModTab;
 import net.Ramon.cimolichthys.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -39,6 +40,8 @@ public class Cimolichthys {
 
     public Cimolichthys() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTab.register(modEventBus);
 
         ModItems.register(modEventBus);
 
